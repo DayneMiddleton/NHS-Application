@@ -22,6 +22,13 @@ img.center {
   padding:5px;
 }
 
+img.Exercise {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:10px;
+}
+
 img.HealthyLiving {
   display: block;
   margin-left: auto;
