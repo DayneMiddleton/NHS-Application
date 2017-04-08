@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" href="./images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="./images/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
@@ -36,7 +36,7 @@
 
     <div class="menu">
       <div class="menu__header">
-       <img src="images/NHS%20Header.jpeg" alt="NHS Logo" LongDesc="App Menu NHS Logo" class="NHSHeader">   
+        <img src="images/NHS%20Trust%20Midlands.jpg" alt="NHS Logo" Long desc="App menu NHS logo" class="NHSHeader"> 
         </div>
       <ul class="menu__list">
         <li><a href="index.html">Home</a></li>
@@ -49,9 +49,10 @@
 
     <div class="app__content">
     
-<img src="images/nhs-logo.jpg" alt="NHS Logo" longdesc="NHS Logo" class="NHSLogo">
+<img src="images/NHS%20UHNM%20Logo.jpg" alt="NHS Logo" long desc="NHS University Hospital North Midlands Logo" class="NHSLogo">
     
 
+        
 <h1>Borg Breathlessness Scale</h1>
     
 <p>Whilst you were exercising please can you assess how breathless you were, when you were working at you hardest. Please use the scale below to help you and input your answer in to the app, when asked.</p>
@@ -66,9 +67,9 @@
         
 <div class="form-style-2">
 <div class="form-style-2-heading">Provide your breathlessness information</div>
-<form action="" method="post">
-<label for="field1"><span>Breath Input <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
-<label><span>&nbsp;</span><input type="submit" value="Submit" /></label>
+<form name="Breath" action="" method="post">
+<label for="field1"><span>Breath Input <span class="required">*</span></span><input type="text" id="Breath" class="input-field" name="field1" value="" /></label>
+<label><span>&nbsp;</span><input type="submit" value="Submit" onclick="aa();" /></label>
 </form>
 </div>
     
@@ -84,7 +85,17 @@
       console.error('Service worker failed ', error);
     });
   }
-  </script>
+</script>
+<script type="text/javascript">
+function aa()
+{
+var xhmlhttp;
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET","Breath.php?bth="+document.getElementId("Breath").value,false);
+xmlhtt.send(null);
+    
+}
+</script>
   <script src="./js/toast.js"></script>
   <script src="./js/offline.js"></script>
   <script src="./js/app.js"></script>
